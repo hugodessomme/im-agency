@@ -3,6 +3,7 @@
 This is an open source agency website build with everything new in Next.js 13. It is bootstrapped with `create-next-app`.
 
 [![IM Agency](./public/images/screenshot.jpg)](https://im-agency.vercel.app/)
+Designed by [laaqiq.design](https://www.figma.com/@laaqiq) • Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 > **Warning**
 > This project is still in development and is not ready for production use.
