@@ -58,4 +58,4 @@ Contributions are welcome! Please open an issue if you have any questions or sug
 
 ## License
 
-Licensed under the MIT License. Check the [LICENSE](./LICENSE) file for details.
+Licensed under the MIT License. Check the [LICENSE](./LICENSE.md) file for details.
