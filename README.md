@@ -1,8 +1,8 @@
-# [Im Agency](https://skateshop.sadmn.com/)
+# [IM Agency](https://im-agency.vercel.app/)
 
-This is an open source agency website build with everything new in Next.js 13. It is bootstrapped with `create-t3-app`.
+This is an open source agency website build with everything new in Next.js 13. It is bootstrapped with `create-next-app`.
 
-[![Skateshop13](./public/images/screenshot.jpg)](https://im-agency.vercel.app/)
+[![IM Agency](./public/images/screenshot.jpg)](https://im-agency.vercel.app/)
 
 > **Warning**
 > This project is still in development and is not ready for production use.
