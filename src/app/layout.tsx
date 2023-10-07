@@ -23,7 +23,9 @@ export default function RootLayout({
           "bg-background font-sans font-normal  text-foreground"
         )}
       >
+        {/* TODO: Header */}
         {children}
+        {/* TODO: Footer */}
       </body>
     </html>
   )
