@@ -1,8 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
+import { Check, Shapes } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
+import IconBadge from "@/components/icon-badge"
 
 export default function IndexPage() {
   return (
@@ -52,6 +54,8 @@ export default function IndexPage() {
               width="570"
               height="602"
               className="order-first mx-auto flex-shrink-0 xl:order-last"
+              priority={true}
+              quality={100}
             />
           </div>
         </div>
@@ -66,6 +70,7 @@ export default function IndexPage() {
               alt="Digitalside"
               width="147"
               height="42"
+              quality={100}
             />
           </li>
           <li>
@@ -74,6 +79,7 @@ export default function IndexPage() {
               alt="Vortex"
               width="108"
               height="32"
+              quality={100}
             />
           </li>
           <li>
@@ -82,6 +88,7 @@ export default function IndexPage() {
               alt="Travel Explorer"
               width="119"
               height="47"
+              quality={100}
             />
           </li>
           <li>
@@ -90,6 +97,7 @@ export default function IndexPage() {
               alt="Fuzion"
               width="86"
               height="21"
+              quality={100}
             />
           </li>
           <li>
@@ -113,6 +121,7 @@ export default function IndexPage() {
               width="566"
               height="585"
               className="flex-shrink-0"
+              quality={100}
             />
             <div className="space-y-5">
               <h2 className="flex flex-col">
@@ -121,7 +130,7 @@ export default function IndexPage() {
                   An Experienced Design Agency
                 </span>
               </h2>
-              <p className="text-xl">Provides a full service range</p>
+              <p className="text-xl leading-8">Provides a full service range</p>
               <p className="text-foreground-subtle">
                 Ability to put themselves in the merchant&apos;s shoes. It is
                 meant to partner on the long run, and work as an extension of
@@ -197,7 +206,7 @@ export default function IndexPage() {
         <Separator className="mb-32" />
 
         {/* Video Reel */}
-        <section className="mb-20 flex flex-col items-center gap-x-32 gap-y-6 xl:mb-56 xl:flex-row">
+        <section className="mb-20 flex flex-col items-center gap-x-32 gap-y-6 xl:mb-52 xl:flex-row">
           <div className="h-[368px] w-full max-w-[570px] rounded bg-neutral-400"></div>
           <div className="space-y-5 xl:w-[29.5rem]">
             <h2 className="flex flex-col">
@@ -212,8 +221,111 @@ export default function IndexPage() {
             </p>
           </div>
         </section>
+
         {/* Features */}
+        <section className="mb-28 xl:mb-52 ">
+          <div className="mb-28 flex flex-col items-center gap-x-32 gap-y-20 xl:mb-52 xl:flex-row">
+            <Image
+              src="/images/give-site-new-look.png"
+              alt=""
+              width="529"
+              height="551"
+              className="mx-auto flex-shrink-0 xl:order-last"
+              quality={100}
+            />
+            <div className="space-y-5 xl:w-[29.5rem]">
+              <h2 className="flex flex-col">
+                <span className="mb-5 uppercase text-primary">Features</span>
+                <span className="text-[2.5rem] font-extrabold leading-[2.5rem] xl:text-[3.5rem] xl:leading-[4rem]">
+                  Give Your Site A New Look
+                </span>
+              </h2>
+              <p className="text-xl leading-8">
+                Service range including technical skills, design, business
+                understanding.
+              </p>
+              <ul className="space-y-4 text-foreground-subtle">
+                <li className="flex items-center gap-x-4">
+                  <IconBadge>
+                    <Check className="h-6 w-6" />
+                  </IconBadge>
+                  Range including technical skills
+                </li>
+                <li className="flex items-center gap-x-4">
+                  <IconBadge>
+                    <Check className="h-6 w-6" />
+                  </IconBadge>
+                  Business understanding
+                </li>
+                <li className="flex items-center gap-x-4">
+                  <IconBadge>
+                    <Check className="h-6 w-6" />
+                  </IconBadge>
+                  Partner on the long run
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center gap-x-32 gap-y-20 xl:flex-row">
+            <div className="space-y-5 xl:w-[29.5rem]">
+              <p className="mb-5 uppercase text-primary">Features</p>
+              <p className="text-xl leading-8">
+                Long run, and work as an extension of the merchant's team.
+              </p>
+              <p>
+                <Link href="/services">Read More</Link>
+              </p>
+            </div>
+            <ul className="xl:flex xl:items-end">
+              <li className="rounded-t-md border border-background-subtle bg-white p-12 xl:rounded-bl-md">
+                <IconBadge size="lg" className="mb-10">
+                  <Shapes className="h-8 w-8" />
+                </IconBadge>
+                <p className="mb-5 text-2xl font-bold">Professional</p>
+                <p className="leading-8 text-foreground-subtle">
+                  Full service range including technical skills, design.
+                </p>
+              </li>
+              <li className="rounded-b-md border border-t-0 border-background-subtle p-12 pt-[6.5rem] xl:rounded-bl-none xl:rounded-tr-md xl:border-l-0 xl:border-t">
+                <p className="mb-5 text-2xl font-bold">Accessibility</p>
+                <p className="leading-8 text-foreground-subtle">
+                  Business understanding, ability to put themselves.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
         {/* Services */}
+        <section className="mb-28 xl:mb-36">
+          <div className="mb-28 flex flex-col items-center gap-x-28 gap-y-4 xl:mb-40 xl:flex-row">
+            <Image
+              src="/images/making-complex-digital-products.png"
+              alt=""
+              width="580"
+              height="570"
+              className="flex-shrink-0"
+              quality={100}
+            />
+            <div className="space-y-5">
+              <h2 className="flex flex-col">
+                <span className="mb-5 uppercase text-primary">Service</span>
+                <span className="text-[2.5rem] font-extrabold leading-[2.5rem] xl:text-[3.5rem] xl:leading-[4rem]">
+                  Making Complex Digital Products
+                </span>
+              </h2>
+              <p className="text-xl leading-8">
+                Agency provides a full service range including technical skills,
+                design, business.
+              </p>
+              <Button asChild variant="light">
+                <Link href="/about">Explore</Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
         {/* Portfolio */}
         {/* Events */}
         {/* Our Team */}
