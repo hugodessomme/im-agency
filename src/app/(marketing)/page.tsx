@@ -271,7 +271,7 @@ export default function IndexPage() {
             <div className="space-y-5 xl:w-[29.5rem]">
               <p className="mb-5 uppercase text-primary">Features</p>
               <p className="text-xl leading-8">
-                Long run, and work as an extension of the merchant's team.
+                Long run, and work as an extension of the merchant&apos;s team.
               </p>
               <p>
                 <Link href="/services">Read More</Link>
