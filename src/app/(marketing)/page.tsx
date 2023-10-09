@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Check, Shapes } from "lucide-react"
+import { Briefcase, Check, Presentation, Shapes } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
@@ -324,9 +324,74 @@ export default function IndexPage() {
               </Button>
             </div>
           </div>
+
+          <div className="space-y-5">
+            <h2 className="mb-9 flex flex-col">
+              <span className="mb-5 uppercase text-primary">Service</span>
+              <span className="text-[2.5rem] font-extrabold leading-[3rem]">
+                How Our Agency Can Help
+              </span>
+            </h2>
+
+            <ul className="divide divide-y divide-background-subtle rounded-md border border-background-subtle xl:flex xl:items-end xl:divide-x xl:divide-y-0">
+              <li className="flex-1 px-7 py-12">
+                <IconBadge size="lg" className="mb-10">
+                  <Presentation className="h-8 w-8" />
+                </IconBadge>
+                <h3 className="mb-5 text-2xl font-bold">Design</h3>
+                <p className="mb-6 leading-8 text-foreground-subtle">
+                  Agency provides a full service range including technical
+                  skills, design.
+                </p>
+                <p>
+                  <Link href="/services">Discover More</Link>
+                </p>
+              </li>
+              <li className="flex-1 px-7 py-12">
+                <IconBadge size="lg" className="mb-10">
+                  <Briefcase className="h-8 w-8" />
+                </IconBadge>
+                <h3 className="mb-5 text-2xl font-bold">Development</h3>
+                <p className="mb-6 leading-8 text-foreground-subtle">
+                  Full service range including technical skills, design,
+                  business.
+                </p>
+                <p>
+                  <Link href="/services">Discover More</Link>
+                </p>
+              </li>
+              <li className="flex-1 px-7 py-12">
+                <IconBadge size="lg" className="mb-10">
+                  <Briefcase className="h-8 w-8" />
+                </IconBadge>
+                <h3 className="mb-5 text-2xl font-bold">Marketing</h3>
+                <p className="mb-6 leading-8 text-foreground-subtle">
+                  Technical skills, design, business understanding, ability.
+                </p>
+                <p>
+                  <Link href="/services">Explore Now</Link>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      {/* Portfolio */}
+      <div className="mb-24 bg-tertiary py-24 xl:mb-32">
+        <section className="">
+          <div className="container">
+            <h2 className="mb-9 flex flex-col items-center">
+              <span className="mb-5 uppercase text-primary">Portfolio</span>
+              <span className="text-[2.5rem] font-extrabold leading-[2.5rem] text-white xl:text-[3.5rem] xl:leading-[4rem]">
+                Latest Work
+              </span>
+            </h2>
+
+            {/* TODO: filtres */}
+          </div>
         </section>
 
-        {/* Portfolio */}
         {/* Events */}
         {/* Our Team */}
         {/* Testimonials */}
