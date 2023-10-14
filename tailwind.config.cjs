@@ -50,6 +50,7 @@ module.exports = {
           foreground: colors.white,
         },
         tertiary: {
+          subtle: "rgb(58 60 86)",
           DEFAULT: "#28293e",
         },
       },

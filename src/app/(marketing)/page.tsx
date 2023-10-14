@@ -1,12 +1,18 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
-import { Briefcase, Check, Presentation, Shapes } from "lucide-react"
+import { usePathname } from "next/navigation"
+import { Briefcase, Check, ClockIcon, Presentation, Shapes } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import { Badge } from "@/components/ui/badge"
+import { Button, buttonVariants } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import IconBadge from "@/components/icon-badge"
 
 export default function IndexPage() {
+  const pathname = usePathname()
   return (
     <>
       {/* Heading */}
@@ -379,27 +385,204 @@ export default function IndexPage() {
 
       {/* Portfolio */}
       <div className="mb-24 bg-tertiary py-24 xl:mb-32">
-        <section className="">
+        <section className="mb-28">
           <div className="container">
-            <h2 className="mb-9 flex flex-col items-center">
+            <h2 className="mx-auto mb-9 flex max-w-md flex-col text-center">
               <span className="mb-5 uppercase text-primary">Portfolio</span>
               <span className="text-[2.5rem] font-extrabold leading-[2.5rem] text-white xl:text-[3.5rem] xl:leading-[4rem]">
                 Latest Work
               </span>
             </h2>
 
-            {/* TODO: filtres */}
+            <ul className="mb-16 flex flex-wrap justify-center gap-x-14 gap-y-4">
+              <li>
+                <Link href="/" className="text-white/[.64]">
+                  <span className={pathname === "/" ? "text-white" : ""}>
+                    Show All
+                  </span>
+                  <span className="inline-block -translate-y-2 text-sm">
+                    14
+                  </span>
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/" className="text-white/[.64]">
+                  <span className={pathname === "/design" ? "text-white" : ""}>
+                    Design
+                  </span>
+                  <span className="inline-block -translate-y-2 text-sm">6</span>
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/" className="text-white/[.64]">
+                  <span
+                    className={pathname === "/branding" ? "text-white" : ""}
+                  >
+                    Branding
+                  </span>
+                  <span className="inline-block -translate-y-2 text-sm">4</span>
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/" className="text-white/[.64]">
+                  <span
+                    className={pathname === "/illustration" ? "text-white" : ""}
+                  >
+                    Illustration
+                  </span>
+                  <span className="inline-block -translate-y-2 text-sm">3</span>
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/" className="text-white/[.64]">
+                  <span className={pathname === "/motion" ? "text-white" : ""}>
+                    Motion
+                  </span>
+                  <span className="inline-block -translate-y-2 text-sm">1</span>
+                </Link>
+              </li>
+            </ul>
+
+            <div className="mb-16 grid grid-cols-1 gap-7 xl:grid-cols-12">
+              <div className="flex h-[26rem] flex-col items-start justify-end overflow-hidden rounded-md bg-neutral-400 px-7 py-12 xl:col-span-4 xl:px-12">
+                <Badge className="mb-6">Illustration</Badge>
+                <p className="text-[2.5rem] font-extrabold leading-[3rem] text-white">
+                  Work Media
+                </p>
+              </div>
+              <div className="flex h-[26rem] flex-col items-start justify-end overflow-hidden rounded-md bg-neutral-400 px-7 py-12 xl:col-span-8 xl:px-12">
+                <Badge className="mb-6">Illustration</Badge>
+                <p className="text-[2.5rem] font-extrabold leading-[3rem] text-white">
+                  Work Media
+                </p>
+              </div>
+              <div className="flex h-[26rem] flex-col items-start justify-end overflow-hidden rounded-md bg-neutral-400 px-7 py-12 xl:col-span-8 xl:px-12">
+                <Badge className="mb-6">Illustration</Badge>
+                <p className="text-[2.5rem] font-extrabold leading-[3rem] text-white">
+                  Work Media
+                </p>
+              </div>
+              <div className="flex h-[26rem] flex-col items-start justify-end overflow-hidden rounded-md bg-neutral-400 px-7 py-12 xl:col-span-4 xl:px-12">
+                <Badge className="mb-6">Illustration</Badge>
+                <p className="text-[2.5rem] font-extrabold leading-[3rem] text-white">
+                  Work Media
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <Link
+                href="/portfolio"
+                className={cn(
+                  buttonVariants({ variant: "outline" }),
+                  "text-white"
+                )}
+              >
+                Explore more
+              </Link>
+            </div>
           </div>
         </section>
 
+        {/* TODO: We Help Companies Move Faster */}
+
         {/* Events */}
-        {/* Our Team */}
-        {/* Testimonials */}
-        {/* Pricing */}
-        {/* FAQ */}
-        {/* Our Awards */}
-        {/* Our Blog */}
+        <section className="mb-28">
+          <div className="container">
+            <h2 className="mx-auto mb-9 flex max-w-md flex-col text-center">
+              <span className="mb-5 uppercase text-primary">Events</span>
+              <span className="text-[2.5rem] font-extrabold leading-[2.5rem] text-white xl:text-[3.5rem] xl:leading-[4rem]">
+                Explore Future Conferences
+              </span>
+            </h2>
+
+            <ul className="mb-16 grid grid-cols-1 gap-7 xl:grid-cols-3">
+              {Array.from({ length: 3 }).map((event) => (
+                <li className="border-tertiary-subtle relative rounded border px-10 py-9 text-white">
+                  <p className="mb-5 flex gap-3">
+                    <span className="text-7xl font-extrabold">3</span>
+                    <span className="text-2xl font-bold">
+                      <span className="block">November</span>
+                      <span>2021</span>
+                    </span>
+                  </p>
+                  <p className="mb-9">
+                    <ClockIcon className="mr-2 inline h-4 w-4 text-primary" />
+                    9:00 am - 3:00 pm
+                  </p>
+                  <Separator className="bg-tertiary-subtle mb-10" />
+                  <h3 className="mb-5 text-2xl">Design Weeks</h3>
+                  <p className="mb-7 leading-8 text-white/[.64]">
+                    Digital agency is a business you hire to outsource your
+                    digital.
+                  </p>
+                  <Link href="/">
+                    <span className="absolute inset-0"></span>Explore Now
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <div className="text-center">
+              <Link
+                href="/portfolio"
+                className={cn(
+                  buttonVariants({ variant: "outline" }),
+                  "text-white"
+                )}
+              >
+                Explore more
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Team */}
+        <section>
+          <div className="container">
+            <h2 className="mb-9 flex max-w-xl flex-col">
+              <span className="mb-5 uppercase text-primary">Our Team</span>
+              <span className="text-[2.5rem] font-extrabold leading-[2.5rem] text-white xl:text-[3.5rem] xl:leading-[4rem]">
+                Team of Designers and Developers
+              </span>
+            </h2>
+            <ul className="mb-28 flex flex-col gap-7 xl:flex-row">
+              {Array.from({ length: 4 }).map((member) => (
+                <li>
+                  <div className="border-tertiary-subtle mb-6 h-[17rem] w-full rounded border xl:w-[17rem]"></div>
+                  <h3 className="mb-1 text-2xl font-bold text-white">
+                    Azah Anyeni
+                  </h3>
+                  <p className="text-white/[.64]">Designer</p>
+                </li>
+              ))}
+            </ul>
+
+            <div className="flex flex-col gap-x-32 gap-y-10 xl:flex-row xl:items-center">
+              <div className="h-64 w-full overflow-hidden rounded-md bg-neutral-400 xl:h-[28rem]"></div>
+              <div>
+                <p className="mb-7 uppercase text-primary">Founder Words</p>
+                <p className="mb-6 text-2xl font-bold text-white xl:text-[2.5rem] xl:leading-[3rem]">
+                  Digital agency is a business you hire to outsource your
+                  digital marketing efforts
+                </p>
+                <p className="mb-1 text-xl text-white">Ren Delan</p>
+                <p className="text-sm text-white/[.64]">Founder</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
+      {/* Our Team */}
+      {/* Testimonials */}
+      {/* Pricing */}
+      {/* FAQ */}
+      {/* Our Awards */}
+      {/* Our Blog */}
     </>
   )
 }
