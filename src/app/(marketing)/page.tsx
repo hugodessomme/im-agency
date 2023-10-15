@@ -3,13 +3,110 @@
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Briefcase, Check, ClockIcon, Presentation, Shapes } from "lucide-react"
+import {
+  Briefcase,
+  Check,
+  ClockIcon,
+  PlusCircle,
+  Presentation,
+  Shapes,
+  StarIcon,
+} from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 import { Button, buttonVariants } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import IconBadge from "@/components/icon-badge"
+
+const testimonials = [
+  {
+    content:
+      "A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital solutions to promote your product or service online and help you.",
+    name: "Alan Martí",
+    company: "Meta Inc.",
+    image: "/images/testimonial-1.png",
+  },
+  {
+    content:
+      "Provide your business with a variety of digital solutions to promote your product or service online.",
+    name: "Richardo Kann",
+    company: "Photogram",
+    image: "/images/testimonial-2.png",
+  },
+  {
+    content:
+      "Outsource your digital marketing efforts, instead of handling in-house. They can provide your business with a variety.",
+    name: "Graham Griffiths",
+    company: "Twitor",
+    image: "/images/testimonial-3.png",
+  },
+  {
+    content:
+      "Promote your product or service online and help you hit your marketing goals and grow your business.",
+    name: "Maria Trofimova",
+    company: "Whochat",
+    image: "/images/testimonial-4.png",
+  },
+]
+
+const pricing = [
+  {
+    offer: "Consultation",
+    price: "Free",
+    popular: false,
+    content: "Your digital marketing efforts, instead of handling in-house.",
+    options: [
+      { label: "Brand Design", included: true },
+      { label: "Market Analysis", included: false },
+      { label: "Production", included: false },
+    ],
+  },
+  {
+    offer: "Design",
+    price: "$1500",
+    popular: true,
+    content:
+      "Provide your business with a variety of digital solutions to promote.",
+    options: [
+      { label: "Brand Design", included: true },
+      { label: "Market Analysis", included: true },
+      { label: "Production", included: false },
+    ],
+  },
+  {
+    offer: "Design+Code",
+    price: "$2900",
+    popular: false,
+    content: "Help you hit your marketing goals and grow your business.",
+    options: [
+      { label: "Brand Design", included: true },
+      { label: "Market Analysis", included: true },
+      { label: "Production", included: true },
+    ],
+  },
+]
+
+const blog = [
+  {
+    image: "/images/blog-1.png",
+    category: "Stories",
+    title: "Agency is a business you hire to outsource",
+    date: "5 Nov, 2021",
+  },
+  {
+    image: "/images/blog-2.png",
+    category: "Design",
+    title: "Outsource your digital marketing efforts",
+    date: "29 Oct, 2021",
+  },
+  {
+    image: "/images/blog-3.png",
+    category: "Marketing",
+    title: "Your business with a variety of digital",
+    date: "21 Oct, 2021",
+  },
+]
 
 export default function IndexPage() {
   const pathname = usePathname()
@@ -501,8 +598,11 @@ export default function IndexPage() {
             </h2>
 
             <ul className="mb-16 grid grid-cols-1 gap-7 xl:grid-cols-3">
-              {Array.from({ length: 3 }).map((event) => (
-                <li className="border-tertiary-subtle relative rounded border px-10 py-9 text-white">
+              {Array.from({ length: 3 }).map((event, index) => (
+                <li
+                  key={index}
+                  className="relative rounded border border-tertiary-subtle px-10 py-9 text-white"
+                >
                   <p className="mb-5 flex gap-3">
                     <span className="text-7xl font-extrabold">3</span>
                     <span className="text-2xl font-bold">
@@ -514,7 +614,7 @@ export default function IndexPage() {
                     <ClockIcon className="mr-2 inline h-4 w-4 text-primary" />
                     9:00 am - 3:00 pm
                   </p>
-                  <Separator className="bg-tertiary-subtle mb-10" />
+                  <Separator className="mb-10 bg-tertiary-subtle" />
                   <h3 className="mb-5 text-2xl">Design Weeks</h3>
                   <p className="mb-7 leading-8 text-white/[.64]">
                     Digital agency is a business you hire to outsource your
@@ -551,9 +651,9 @@ export default function IndexPage() {
               </span>
             </h2>
             <ul className="mb-28 flex flex-col gap-7 xl:flex-row">
-              {Array.from({ length: 4 }).map((member) => (
-                <li>
-                  <div className="border-tertiary-subtle mb-6 h-[17rem] w-full rounded border xl:w-[17rem]"></div>
+              {Array.from({ length: 4 }).map((member, index) => (
+                <li key={index}>
+                  <div className="mb-6 h-[17rem] w-full rounded border border-tertiary-subtle xl:w-[17rem]"></div>
                   <h3 className="mb-1 text-2xl font-bold text-white">
                     Azah Anyeni
                   </h3>
@@ -577,12 +677,187 @@ export default function IndexPage() {
           </div>
         </section>
       </div>
-      {/* Our Team */}
+
       {/* Testimonials */}
+      <section className="mb-28">
+        <div className="container">
+          <h2 className="mb-9 flex flex-col text-center xl:mb-16">
+            <span className="mb-5 uppercase text-primary">Testimonials</span>
+            <span className="text-[2.5rem] font-extrabold leading-[3rem]">
+              What Our Clients Saying
+            </span>
+          </h2>
+
+          <ul className="mb-12 grid-rows-1 xl:mb-16 xl:grid xl:grid-flow-col xl:grid-cols-2">
+            {testimonials.map((testimonial, index) => {
+              const isFirst = index === 0
+              const isSecond = index === 1
+              const isThird = index === 2
+              const isFourth = index === 3
+
+              return (
+                <li
+                  key={index}
+                  className={cn(
+                    "rounded border border-background-subtle px-7 py-12",
+                    isFirst && "bg-white xl:col-start-1",
+                    isSecond && "xl:col-start-1",
+                    isThird && "xl:col-start-2",
+                    isFourth && "xl:col-start-2"
+                  )}
+                >
+                  <div className="mb-9 flex gap-2">
+                    {Array.from({ length: 5 }).map((star, index) => (
+                      <StarIcon
+                        key={index}
+                        fill="rgb(250 204 21 / var(--tw-text-opacity))"
+                        className="text-yellow-400"
+                      />
+                    ))}
+                  </div>
+                  <p className="mb-8 leading-8 text-foreground-subtle">
+                    {testimonial.content}
+                  </p>
+                  <div className="flex items-center gap-x-6">
+                    <Image
+                      src={testimonial.image}
+                      alt=""
+                      width="80"
+                      height="80"
+                    />
+                    <div>
+                      <p className="mb-1 text-2xl font-bold">
+                        {testimonial.name}
+                      </p>
+                      <p>{testimonial.company}</p>
+                    </div>
+                  </div>
+                </li>
+              )
+            })}
+          </ul>
+
+          <div className="text-center">
+            <Button asChild variant="light">
+              <Link href="/">See All</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing */}
+      <section className="mb-24 xl:mb-48">
+        <div className="container">
+          <h2 className="mb-4 flex flex-col">
+            <span className="mb-5 uppercase text-primary">Pricing</span>
+            <span className="text-[2.5rem] font-extrabold leading-[3rem]">
+              Check Our Pricing Plans
+            </span>
+          </h2>
+
+          <ul className="xl:flex xl:items-end">
+            {pricing.map((price, index) => {
+              const isFirst = index === 0
+              const isPopular = price.popular
+              const isLast = index === pricing.length - 1
+
+              return (
+                <li
+                  key={index}
+                  className={cn(
+                    "border border-background-subtle px-7 py-11",
+                    isFirst
+                      ? "rounded-t-md xl:rounded-bl-md xl:rounded-tr-none xl:border-r-0"
+                      : "",
+                    isPopular ? "bg-white xl:rounded-t-md" : "",
+                    isLast
+                      ? "rounded-b-md xl:rounded-bl-none xl:rounded-tr-md xl:border-l-0"
+                      : ""
+                  )}
+                >
+                  {isPopular && <Badge className="mb-6">Popular</Badge>}
+                  <p className="mb-4 uppercase text-primary">{price.offer}</p>
+                  <p className="mb-4 text-[2.5rem] font-extrabold leading-[3rem]">
+                    {price.price}
+                  </p>
+                  <p className="mb-9 leading-8 text-foreground-subtle">
+                    {price.content}
+                  </p>
+                  <ul className="mb-9 space-y-4">
+                    {price.options.map((option, index) => (
+                      <li
+                        key={index}
+                        className={cn(
+                          "flex items-center gap-x-4",
+                          option.included
+                            ? "text-foreground"
+                            : "text-foreground-subtle"
+                        )}
+                      >
+                        {option.included ? (
+                          <PlusCircle
+                            fill="rgb(239 109 88 / var(--tw-text-opacity))"
+                            className="text-white"
+                          />
+                        ) : (
+                          <PlusCircle
+                            fill="rgba(246, 218, 202, 1)"
+                            className="text-white"
+                          />
+                        )}
+                        {option.label}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button asChild variant={isPopular ? "default" : "light"}>
+                    <Link href="/">Contact Us</Link>
+                  </Button>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+      </section>
+
       {/* FAQ */}
       {/* Our Awards */}
       {/* Our Blog */}
+      <section className="mb-12 mb-16">
+        <div className="container">
+          <div className="mb-12 flex flex-col items-start gap-y-9 xl:flex-row xl:items-end xl:justify-between">
+            <h2 className="flex flex-col">
+              <span className="mb-5 uppercase text-primary">Our Blog</span>
+              <span className="text-[2.5rem] font-extrabold leading-[3rem]">
+                Latest Blog Articles
+              </span>
+            </h2>
+            <Button asChild variant="light">
+              <Link href="/">Discover All</Link>
+            </Button>
+          </div>
+
+          <ul className="flex flex-col gap-x-7 gap-y-12 xl:flex-row">
+            {blog.map((post, index) => (
+              <li key={index} className="relative">
+                <Image
+                  src={post.image}
+                  alt=""
+                  className="mb-6 rounded-md"
+                  width="370"
+                  height="224"
+                  quality="100"
+                />
+                <p className="mb-4 text-xl leading-8">{post.category}</p>
+                <h3 className="text-2xl font-bold">
+                  <span className="absolute inset-0"></span>
+                  {post.title}
+                </h3>
+                <p className="text-foreground-subtle">{post.date}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
     </>
   )
 }
