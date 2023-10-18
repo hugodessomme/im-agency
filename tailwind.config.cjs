@@ -10,6 +10,13 @@ module.exports = {
   ],
   theme: {
     // Overrides
+    container: {
+      center: true,
+      padding: "1.5rem",
+      screens: {
+        xl: "1218px",
+      },
+    },
     fontFamily: {
       sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
       // Uncomment if you need it!
@@ -26,6 +33,7 @@ module.exports = {
     extend: {
       colors: {
         background: {
+          subtle: "#f3d1bf",
           DEFAULT: "#fdf0e9",
           emphasis: "#f9e5da",
         },
@@ -38,9 +46,27 @@ module.exports = {
           foreground: colors.white,
         },
         secondary: {
-          DEFAULT: "#28293e",
+          DEFAULT: "#b550f8",
           foreground: colors.white,
         },
+        tertiary: {
+          subtle: "rgb(58 60 86)",
+          DEFAULT: "#28293e",
+        },
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: 0 },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: 0 },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
