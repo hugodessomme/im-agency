@@ -11,6 +11,7 @@ const iconBadgeVariants = cva(
       },
       size: {
         default: "h-8 w-8",
+        md: "h-16 w-16",
         lg: "h-20 w-20",
       },
     },
