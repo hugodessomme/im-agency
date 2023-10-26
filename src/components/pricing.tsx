@@ -1,46 +1,10 @@
 import Link from "next/link"
 import { PlusCircleIcon } from "lucide-react"
 
+import { plans } from "@/config/plans"
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-
-const pricing = [
-  {
-    offer: "Consultation",
-    price: "Free",
-    popular: false,
-    content: "Your digital marketing efforts, instead of handling in-house.",
-    options: [
-      { label: "Brand Design", included: true },
-      { label: "Market Analysis", included: false },
-      { label: "Production", included: false },
-    ],
-  },
-  {
-    offer: "Design",
-    price: "$1500",
-    popular: true,
-    content:
-      "Provide your business with a variety of digital solutions to promote.",
-    options: [
-      { label: "Brand Design", included: true },
-      { label: "Market Analysis", included: true },
-      { label: "Production", included: false },
-    ],
-  },
-  {
-    offer: "Design+Code",
-    price: "$2900",
-    popular: false,
-    content: "Help you hit your marketing goals and grow your business.",
-    options: [
-      { label: "Brand Design", included: true },
-      { label: "Market Analysis", included: true },
-      { label: "Production", included: true },
-    ],
-  },
-]
 
 export function Pricing() {
   return (
@@ -54,10 +18,10 @@ export function Pricing() {
         </h2>
 
         <ul className="xl:flex xl:items-end">
-          {pricing.map((price, index) => {
+          {plans.map((plan, index) => {
             const isFirst = index === 0
-            const isPopular = price.popular
-            const isLast = index === pricing.length - 1
+            const isPopular = plan.popular
+            const isLast = index === plans.length - 1
 
             return (
               <li
@@ -74,17 +38,17 @@ export function Pricing() {
                 )}
               >
                 {isPopular && <Badge className="mb-6">Popular</Badge>}
-                <p className="mb-4 uppercase text-primary">{price.offer}</p>
+                <p className="mb-4 uppercase text-primary">{plan.offer}</p>
                 <p className="mb-4 text-[2.5rem] font-extrabold leading-[3rem]">
-                  {price.price}
+                  {plan.price}
                 </p>
                 <p className="mb-9 leading-8 text-foreground-subtle">
-                  {price.content}
+                  {plan.content}
                 </p>
                 <ul className="mb-9 space-y-4">
-                  {price.options.map((option, index) => (
+                  {plan.options.map((option) => (
                     <li
-                      key={index}
+                      key={option.label}
                       className={cn(
                         "flex items-center gap-x-4",
                         option.included
