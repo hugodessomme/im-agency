@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { FacebookIcon, InstagramIcon, TwitterIcon } from "lucide-react"
 
 import { site } from "@/config/site"
 import { Separator } from "@/components/ui/separator"
@@ -13,7 +12,7 @@ export function Footer() {
           <p className="text-2xl font-extrabold">{site.name}</p>
 
           {site.footerNav.map((nav) => (
-            <nav className="leading-8">
+            <nav key={nav.title} className="leading-8">
               <p className="mb-4 uppercase text-primary">{nav.title}</p>
               <ul>
                 {nav.items.map((item) => (
@@ -30,11 +29,12 @@ export function Footer() {
               const Icon = item.icon
 
               return (
-                <li>
+                <li key={item.label}>
                   <Link href="/">
                     <IconBadge className="h-12 w-12">
                       <Icon className="h-6 w-6" />
                     </IconBadge>
+                    <span className="sr-only">{item.label}</span>
                   </Link>
                 </li>
               )
