@@ -11,6 +11,11 @@ export interface Plan {
   options: PlanOptions[]
 }
 
+export interface Question {
+  label: string
+  content: string
+}
+
 export interface Award {
   image: string
   title: string
