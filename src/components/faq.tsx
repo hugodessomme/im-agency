@@ -30,10 +30,8 @@ export function Faq() {
           <div className="flex-1">
             <Accordion type="single" collapsible>
               {questions.map((question) => (
-                <AccordionItem value={question.label} className="">
-                  <AccordionTrigger className="">
-                    {question.label}
-                  </AccordionTrigger>
+                <AccordionItem key={question.label} value={question.label}>
+                  <AccordionTrigger>{question.label}</AccordionTrigger>
                   <AccordionContent>{question.content}</AccordionContent>
                 </AccordionItem>
               ))}
