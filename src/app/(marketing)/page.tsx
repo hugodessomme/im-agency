@@ -11,6 +11,7 @@ import { GetStarted } from "@/components/get-started"
 import { HelpBuildDreamProject } from "@/components/help-build-dream-project"
 import { Hero } from "@/components/hero"
 import { HowWeWork } from "@/components/how-we-work"
+import { Newsletter } from "@/components/newsletter"
 import { Portfolio } from "@/components/portfolio"
 import { Pricing } from "@/components/pricing"
 import { Services } from "@/components/services"
@@ -23,10 +24,18 @@ export default function IndexPage() {
     <>
       <Hero />
       <Clients />
-      <Separator className="mb-16" />
+
+      <div className="container">
+        <Separator className="mb-16" />
+      </div>
+
       <About />
       <HowWeWork />
-      <Separator className="mb-32" />
+
+      <div className="container">
+        <Separator className="mb-32" />
+      </div>
+
       <Video />
       <Features />
       <Services />
@@ -43,6 +52,12 @@ export default function IndexPage() {
       <Faq />
       <Awards />
       <Blog />
+
+      <div className="container">
+        <Separator className="mb-[4.75rem]" />
+      </div>
+
+      <Newsletter />
       <Contacts />
       <HelpBuildDreamProject />
     </>
