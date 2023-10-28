@@ -6,8 +6,9 @@ import { cn } from "@/lib/utils"
 import "./globals.css"
 
 import { site } from "@/config/site"
-import { Footer } from "@/components/footer"
-import { Header } from "@/components/header"
+import { Toaster } from "@/components/ui/toaster"
+import { Footer } from "@/components/layout/footer"
+import { Header } from "@/components/layout/header"
 
 export const metadata: Metadata = {
   title: {
@@ -33,6 +34,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Toaster />
       </body>
     </html>
   )

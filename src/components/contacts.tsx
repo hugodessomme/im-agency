@@ -1,10 +1,29 @@
+import Image from "next/image"
 import { CompassIcon, MailIcon, PhoneIcon } from "lucide-react"
 
+import { ContactForm } from "@/components/form/contact-form"
 import IconBadge from "@/components/icon-badge"
 
 export function Contacts() {
   return (
     <section className="mb-32">
+      <div className="relative mb-8 xl:mb-20">
+        <div className="container">
+          <ContactForm className="mx-auto mb-16 xl:absolute xl:top-1/2 xl:w-[29.5rem] xl:-translate-y-1/2" />
+        </div>
+
+        <div className="h-[45rem]">
+          <Image
+            src="/images/map.jpg"
+            width="1440"
+            height="719"
+            alt=""
+            quality="100"
+            className="h-full w-full object-cover"
+          />
+        </div>
+      </div>
+
       <div className="container">
         <ul className="divide-y divide-background-subtle rounded-md border border-background-subtle xl:flex xl:divide-x xl:divide-y-0">
           <li className="flex-1 px-7 py-8 xl:px-12">
