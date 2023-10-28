@@ -32,7 +32,7 @@ type ContactFormValues = z.infer<typeof contactFormSchema>
 
 interface ContactFormProps extends React.FormHTMLAttributes<HTMLFormElement> {}
 
-const defaultValues: Partial<ContactFormValues> = {
+const defaultValues: ContactFormValues = {
   email: "",
   subject: "",
   message: "",
@@ -46,19 +46,12 @@ export function ContactForm({ className }: ContactFormProps) {
   const { toast } = useToast()
 
   function onSubmit(values: ContactFormValues) {
+    // do whatever you want with these values!
+    // console.log({values})
+
     toast({
-      title: (
-        <div className="flex items-center gap-x-2">
-          <CheckCircleIcon className="h-5 w-5" /> Message sent!
-        </div>
-      ),
-      description: (
-        <ul>
-          <li>Email: {values.email}</li>
-          <li>Subject: {values.subject}</li>
-          <li>Message: {values.message}</li>
-        </ul>
-      ),
+      title: "Message sent!",
+      description: "We'll come back to you shortly.",
     })
 
     form.reset()
