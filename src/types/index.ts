@@ -1,3 +1,13 @@
+export interface Team {
+  fullname: string
+  job: string
+  image: {
+    url: string
+    width: number
+    height: number
+  }
+}
+
 interface PlanOptions {
   label: string
   included: boolean

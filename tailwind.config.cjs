@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     // Overrides
+    screens: {
+      xl: "1218px",
+    },
     container: {
       center: true,
       padding: "1.5rem",
