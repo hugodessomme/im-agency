@@ -52,7 +52,7 @@ export function Features() {
 
         <div className="flex flex-col items-center gap-x-32 gap-y-20 xl:flex-row">
           <div className="space-y-5 xl:w-[29.5rem]">
-            <p className="mb-5 uppercase text-primary">Features</p>
+            <p className="uppercase text-primary">Features</p>
             <p className="text-xl leading-8">
               Long run, and work as an extension of the merchant&apos;s team.
             </p>
