@@ -8,7 +8,14 @@ export interface Team {
   }
 }
 
-interface PlanOptions {
+export interface Testimonial {
+  content: string
+  name: string
+  company: string
+  image: string
+}
+
+export interface PlanOptions {
   label: string
   included: boolean
 }
