@@ -3,6 +3,7 @@ import Link from "next/link"
 import { BriefcaseIcon, PresentationIcon } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { Heading } from "@/components/ui/heading"
 import IconBadge from "@/components/icon-badge"
 
 export function Services() {
@@ -19,12 +20,10 @@ export function Services() {
             quality={100}
           />
           <div className="space-y-5">
-            <h2 className="flex flex-col">
-              <span className="mb-5 uppercase text-primary">Service</span>
-              <span className="text-[2.5rem] font-extrabold leading-[2.5rem] xl:text-[3.5rem] xl:leading-[4rem]">
-                Making Complex Digital Products
-              </span>
-            </h2>
+            <Heading as="h2" size="2" prefix="Service">
+              Making Complex Digital Products
+            </Heading>
+
             <p className="text-xl leading-8">
               Agency provides a full service range including technical skills,
               design, business.
@@ -36,12 +35,9 @@ export function Services() {
         </div>
 
         <div className="space-y-5">
-          <h2 className="mb-9 flex flex-col">
-            <span className="mb-5 uppercase text-primary">Service</span>
-            <span className="text-[2.5rem] font-extrabold leading-[3rem]">
-              How Our Agency Can Help
-            </span>
-          </h2>
+          <Heading as="h2" size="3" prefix="Service">
+            How Our Agency Can Help
+          </Heading>
 
           <ul className="divide divide-y divide-background-subtle rounded-md border border-background-subtle xl:flex xl:items-end xl:divide-x xl:divide-y-0">
             <li className="flex-1 px-7 py-12">

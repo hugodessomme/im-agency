@@ -1,17 +1,17 @@
 import Link from "next/link"
 
+import { Heading } from "@/components/ui/heading"
+
 export function HowWeWork() {
   return (
     <section className="mb-16 xl:mb-24">
       <div className="container">
         <div className="flex flex-col gap-x-32 gap-y-20 xl:flex-row">
           <div className="space-y-5 xl:w-[29.5rem]">
-            <h2 className="flex flex-col">
-              <span className="mb-5 uppercase text-primary">How we work</span>
-              <span className="text-[2.5rem] font-extrabold leading-[2.5rem]">
-                Making Your Projects Look Awesome
-              </span>
-            </h2>
+            <Heading as="h2" size="3" prefix="How We Work">
+              Making Your Projects Look Awesome
+            </Heading>
+
             <p className="text-foreground-subtle">
               Technical skills, design, business understanding, ability to put
               themselves in the merchant&apos;s shoes.

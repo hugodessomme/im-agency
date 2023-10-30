@@ -1,16 +1,15 @@
 import Image from "next/image"
 
 import { awards } from "@/config/awards"
+import { Heading } from "@/components/ui/heading"
 
 export function Awards() {
   return (
     <section className="mb-24 xl:mb-28">
       <div className="container">
-        <h2 className="mb-9 flex flex-col items-center xl:mb-16">
-          <span className="text-[2.5rem] font-extrabold leading-[3rem]">
-            Our Awards
-          </span>
-        </h2>
+        <Heading as="h2" size="3" className="mb-9 items-center xl:mb-16">
+          Our Awards
+        </Heading>
 
         <ul className="divide-y divide-background-subtle border-y border-background-subtle">
           {awards.map((award) => (

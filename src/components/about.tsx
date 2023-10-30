@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
+import { Heading } from "@/components/ui/heading"
 
 export function About() {
   return (
@@ -17,12 +18,10 @@ export function About() {
             quality={100}
           />
           <div className="space-y-5">
-            <h2 className="flex flex-col">
-              <span className="mb-5 uppercase text-primary">About</span>
-              <span className="text-[2.5rem] font-extrabold leading-[2.5rem] xl:text-[3.5rem] xl:leading-[4rem]">
-                An Experienced Design Agency
-              </span>
-            </h2>
+            <Heading prefix="About" size="2" as="h2">
+              An Experienced Design Agency
+            </Heading>
+
             <p className="text-xl leading-8">Provides a full service range</p>
             <p className="text-foreground-subtle">
               Ability to put themselves in the merchant&apos;s shoes. It is

@@ -1,6 +1,7 @@
 import Image from "next/image"
 
-import { Button } from "./ui/button"
+import { Button } from "@/components/ui/button"
+import { Heading } from "@/components/ui/heading"
 
 export function Hero() {
   return (
@@ -8,19 +9,17 @@ export function Hero() {
       <div className="container">
         <div className="flex flex-col gap-y-8 xl:flex-row">
           <div>
-            <h1 className="flex flex-col">
-              <span className="mb-5 uppercase text-primary">Modern Studio</span>
-              <span className="mb-3 text-[3.5rem] font-extrabold leading-[4rem] tracking-tight text-white xl:mb-6 xl:text-7xl">
-                We’re Help To Build Your Dream Project
-              </span>
-            </h1>
+            <Heading prefix="ModernStudio" className="mb-3">
+              We’re Help To Build Your Dream Project
+            </Heading>
+
             <p className="mb-4 leading-8 text-white text-white/[.64] xl:mb-8">
               Agency provides a full service range including technical skills,
               design, business understanding.
             </p>
             <div className="mb-11 flex gap-x-2 xl:mb-[6.75rem]">
-              <Button className="flex-1 sm:flex-initial">How We Work</Button>
-              <Button variant="link" className="flex-1 sm:flex-initial">
+              <Button className="sm:flex-initial flex-1">How We Work</Button>
+              <Button variant="link" className="sm:flex-initial flex-1">
                 Contact Us
               </Button>
             </div>

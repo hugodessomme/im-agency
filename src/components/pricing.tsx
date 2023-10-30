@@ -5,17 +5,15 @@ import { plans } from "@/config/plans"
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { Heading } from "@/components/ui/heading"
 
 export function Pricing() {
   return (
     <section className="mb-24 xl:mb-48">
       <div className="container">
-        <h2 className="mb-4 flex flex-col">
-          <span className="mb-5 uppercase text-primary">Pricing</span>
-          <span className="text-[2.5rem] font-extrabold leading-[3rem]">
-            Check Our Pricing Plans
-          </span>
-        </h2>
+        <Heading as="h2" size="3" prefix="Pricing" className="mb-4">
+          Check Our Pricing Plans
+        </Heading>
 
         <ul className="xl:flex xl:items-end">
           {plans.map((plan, index) => {

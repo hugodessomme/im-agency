@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
+import { Heading } from "@/components/ui/heading"
 
 export function GetStarted() {
   return (
@@ -17,12 +18,10 @@ export function GetStarted() {
                 height="148"
                 className="absolute left-3 top-0 -translate-y-1/2 xl:left-20"
               />
-              <h2 className="mb-6 flex flex-col xl:max-w-[16.25rem]">
-                <span className="mb-5 uppercase text-primary">Get Started</span>
-                <span className="text-2xl font-extrabold">
-                  We Help Companies Move Faster
-                </span>
-              </h2>
+              <Heading as="h2" size="4" prefix="Get Started" className="mb-6">
+                We Help Companies Move Faster
+              </Heading>
+
               <Button asChild>
                 <Link href="/">Contact Us</Link>
               </Button>

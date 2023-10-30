@@ -11,6 +11,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { Heading } from "@/components/ui/heading"
 
 interface TeamCarouselProps {
   items: Team[]
@@ -71,12 +72,15 @@ export function TeamCarousel({ items }: TeamCarouselProps) {
   return (
     <div className="mb-28">
       <div className="mb-9 items-end justify-between xl:flex">
-        <h2 className="flex flex-col xl:max-w-xl">
-          <span className="mb-5 uppercase text-primary">Our Team</span>
-          <span className="text-[2.5rem] font-extrabold leading-[3rem] text-white xl:text-[3.5rem] xl:leading-[4rem]">
-            Team of Designers and Developers
-          </span>
-        </h2>
+        <Heading
+          as="h2"
+          size="2"
+          color="white"
+          prefix="Our Team"
+          className="xl:max-w-xl"
+        >
+          Team of Designers and Developers
+        </Heading>
 
         {/* Arrows */}
         <div className="hidden gap-x-4 xl:flex">

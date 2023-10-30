@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { Heading } from "@/components/ui/heading"
 
 export function Faq() {
   return (
@@ -14,12 +15,10 @@ export function Faq() {
       <div className="container">
         <div className="gap-x-32 gap-y-9 xl:flex">
           <div className="xl:max-w-md">
-            <h2 className="mb-4 flex flex-col xl:mb-8">
-              <span className="mb-5 uppercase text-primary">FAQ</span>
-              <span className="text-[2.5rem] font-extrabold leading-[3rem]">
-                Frequently Asked Questions
-              </span>
-            </h2>
+            <Heading as="h2" size="3" prefix="FAQ" className="mb-4 xl:mb-8">
+              Frequently Asked Questions
+            </Heading>
+
             <p className="mb-8 text-foreground-subtle">
               A digital agency is a business you hire to outsource your digital
               marketing efforts, instead of handling in-house.

@@ -3,18 +3,17 @@ import Link from "next/link"
 
 import { posts } from "@/config/posts"
 import { Button } from "@/components/ui/button"
+import { Heading } from "@/components/ui/heading"
 
 export function Blog() {
   return (
     <section className="mb-12 xl:mb-16">
       <div className="container">
         <div className="mb-12 flex flex-col items-start gap-y-9 xl:flex-row xl:items-end xl:justify-between">
-          <h2 className="flex flex-col">
-            <span className="mb-5 uppercase text-primary">Our Blog</span>
-            <span className="text-[2.5rem] font-extrabold leading-[3rem]">
-              Latest Blog Articles
-            </span>
-          </h2>
+          <Heading as="h2" size="3" prefix="Our Blog">
+            Latest Blog Articles
+          </Heading>
+
           <Button asChild variant="light">
             <Link href="/">Discover All</Link>
           </Button>

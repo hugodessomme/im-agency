@@ -3,18 +3,22 @@ import { ClockIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
+import { Heading } from "@/components/ui/heading"
 import { Separator } from "@/components/ui/separator"
 
 export function Events() {
   return (
     <section className="mb-28">
       <div className="container">
-        <h2 className="mx-auto mb-9 flex max-w-md flex-col text-center">
-          <span className="mb-5 uppercase text-primary">Events</span>
-          <span className="text-[2.5rem] font-extrabold leading-[2.5rem] text-white xl:text-[3.5rem] xl:leading-[4rem]">
-            Explore Future Conferences
-          </span>
-        </h2>
+        <Heading
+          as="h2"
+          size="2"
+          color="white"
+          prefix="Events"
+          className="mx-auto mb-9 max-w-md text-center"
+        >
+          Explore Future Conferences
+        </Heading>
 
         <ul className="mb-16 grid grid-cols-1 gap-7 xl:grid-cols-3">
           {Array.from({ length: 3 }).map((event, index) => (

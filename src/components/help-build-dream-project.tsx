@@ -1,6 +1,7 @@
 import Image from "next/image"
 
 import { Button } from "@/components/ui/button"
+import { Heading } from "@/components/ui/heading"
 
 export function HelpBuildDreamProject() {
   return (
@@ -16,9 +17,10 @@ export function HelpBuildDreamProject() {
             quality="100"
           />
           <div>
-            <h2 className="mb-4 text-[2.5rem] font-extrabold leading-[3rem] tracking-tight text-white xl:mb-7 xl:text-[3.5rem] xl:leading-[4rem]">
+            <Heading as="h2" size="2" color="white" className="mb-4 xl:mb-7">
               We’re Help To Build Your Dream Project
-            </h2>
+            </Heading>
+
             <p className="mb-5 leading-8 text-white/[.64] xl:mb-9">
               A digital agency is a business you hire to outsource your digital
               marketing efforts, instead of handling in-house.

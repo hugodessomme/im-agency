@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 import { buttonVariants } from "@/components/ui/button"
+import { Heading } from "@/components/ui/heading"
 
 export function Portfolio() {
   const pathname = usePathname()
@@ -13,12 +14,15 @@ export function Portfolio() {
   return (
     <section className="mb-36 xl:mb-48">
       <div className="container">
-        <h2 className="mx-auto mb-9 flex max-w-md flex-col text-center">
-          <span className="mb-5 uppercase text-primary">Portfolio</span>
-          <span className="text-[2.5rem] font-extrabold leading-[2.5rem] text-white xl:text-[3.5rem] xl:leading-[4rem]">
-            Latest Work
-          </span>
-        </h2>
+        <Heading
+          as="h2"
+          size="2"
+          color="white"
+          prefix="Portfolio"
+          className="mb-9 items-center"
+        >
+          Latest Work
+        </Heading>
 
         <ul className="mb-16 flex flex-wrap justify-center gap-x-14 gap-y-4">
           <li>

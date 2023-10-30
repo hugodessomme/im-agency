@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { CheckIcon, ShapesIcon } from "lucide-react"
 
+import { Heading } from "@/components/ui/heading"
 import IconBadge from "@/components/icon-badge"
 
 export function Features() {
@@ -18,12 +19,10 @@ export function Features() {
             quality={100}
           />
           <div className="space-y-5 xl:w-[29.5rem]">
-            <h2 className="flex flex-col">
-              <span className="mb-5 uppercase text-primary">Features</span>
-              <span className="text-[2.5rem] font-extrabold leading-[2.5rem] xl:text-[3.5rem] xl:leading-[4rem]">
-                Give Your Site A New Look
-              </span>
-            </h2>
+            <Heading as="h2" size="2" prefix="Features">
+              Give Your Site A New Look
+            </Heading>
+
             <p className="text-xl leading-8">
               Service range including technical skills, design, business
               understanding.
