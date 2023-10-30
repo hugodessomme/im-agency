@@ -9,7 +9,7 @@ export function Hero() {
       <div className="container">
         <div className="flex flex-col gap-y-8 xl:flex-row">
           <div>
-            <Heading prefix="ModernStudio" className="mb-3">
+            <Heading prefix="ModernStudio" color="white" className="mb-3">
               We’re Help To Build Your Dream Project
             </Heading>
 
