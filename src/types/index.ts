@@ -46,4 +46,6 @@ export interface Post {
   category: string
   title: string
   date: string
+  slug: string
+  featured?: boolean
 }

@@ -1,9 +1,10 @@
-import Image from "next/image"
 import Link from "next/link"
 
 import { posts } from "@/config/posts"
+import { routes } from "@/config/routes"
 import { Button } from "@/components/ui/button"
 import { Heading } from "@/components/ui/heading"
+import { BlogPost } from "@/components/blog-post"
 
 export function Blog() {
   return (
@@ -15,27 +16,14 @@ export function Blog() {
           </Heading>
 
           <Button asChild variant="light">
-            <Link href="/">Discover All</Link>
+            <Link href={routes.blog}>Discover All</Link>
           </Button>
         </div>
 
-        <ul className="flex flex-col gap-x-7 gap-y-12 xl:flex-row">
-          {posts.map((post, index) => (
-            <li key={index} className="relative">
-              <Image
-                src={post.image}
-                alt=""
-                className="mb-6 rounded-md"
-                width="370"
-                height="224"
-                quality="100"
-              />
-              <p className="mb-4 text-xl leading-8">{post.category}</p>
-              <h3 className="text-2xl font-bold">
-                <span className="absolute inset-0"></span>
-                {post.title}
-              </h3>
-              <p className="text-foreground-subtle">{post.date}</p>
+        <ul className="grid grid-cols-1 gap-x-7 gap-y-12 xl:grid-cols-3">
+          {posts.slice(0, 3).map((post, index) => (
+            <li key={index}>
+              <BlogPost post={post} />
             </li>
           ))}
         </ul>
