@@ -27,7 +27,11 @@ export function Faq() {
           </div>
 
           <div className="flex-1">
-            <Accordion type="single" collapsible>
+            <Accordion
+              type="single"
+              collapsible
+              defaultValue={questions[0].label}
+            >
               {questions.map((question) => (
                 <AccordionItem key={question.label} value={question.label}>
                   <AccordionTrigger>{question.label}</AccordionTrigger>
