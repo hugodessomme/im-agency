@@ -1,5 +1,6 @@
 import Link from "next/link"
 
+import { routes } from "@/config/routes"
 import { Button } from "@/components/ui/button"
 
 interface MainNavProps {
@@ -26,8 +27,12 @@ export function MainNav({ items }: MainNavProps) {
         </ul>
       </nav>
 
-      <Button variant="outline" className="hidden text-white xl:inline-block">
-        Contact
+      <Button
+        variant="outline"
+        className="hidden text-white xl:inline-flex"
+        asChild
+      >
+        <Link href={routes.contact}>Contact</Link>
       </Button>
     </>
   )

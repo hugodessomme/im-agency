@@ -2,6 +2,7 @@ import Link from "next/link"
 import { PlusCircleIcon } from "lucide-react"
 
 import { plans } from "@/config/plans"
+import { routes } from "@/config/routes"
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -70,7 +71,7 @@ export function Pricing() {
                   ))}
                 </ul>
                 <Button asChild variant={isPopular ? "default" : "light"}>
-                  <Link href="/">Contact Us</Link>
+                  <Link href={routes.contact}>Contact Us</Link>
                 </Button>
               </li>
             )

@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
+import { routes } from "@/config/routes"
 import { Button } from "@/components/ui/button"
 import { Heading } from "@/components/ui/heading"
 
@@ -23,7 +24,7 @@ export function GetStarted() {
               </Heading>
 
               <Button asChild>
-                <Link href="/">Contact Us</Link>
+                <Link href={routes.contact}>Contact Us</Link>
               </Button>
             </div>
             <div className="-mx-9 mb-24 xl:mx-0 xl:-mb-24 xl:-mt-9">

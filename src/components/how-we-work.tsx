@@ -1,10 +1,14 @@
 import Link from "next/link"
 
+import { routes } from "@/config/routes"
 import { Heading } from "@/components/ui/heading"
 
 export function HowWeWork() {
   return (
-    <section className="mb-16 xl:mb-24">
+    <section
+      id="how-we-work"
+      className="mb-16 scroll-mt-24 xl:mb-24 xl:scroll-mt-36"
+    >
       <div className="container">
         <div className="flex flex-col gap-x-32 gap-y-20 xl:flex-row">
           <div className="space-y-5 xl:w-[29.5rem]">
@@ -17,7 +21,7 @@ export function HowWeWork() {
               themselves in the merchant&apos;s shoes.
             </p>
             <p>
-              <Link href="/services">Read More</Link>
+              <Link href={routes.services}>Read More</Link>
             </p>
           </div>
           <ol className="space-y-8">

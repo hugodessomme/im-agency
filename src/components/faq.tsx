@@ -1,6 +1,7 @@
 import Link from "next/link"
 
 import { questions } from "@/config/faq"
+import { routes } from "@/config/routes"
 import {
   Accordion,
   AccordionContent,
@@ -23,7 +24,7 @@ export function Faq() {
               A digital agency is a business you hire to outsource your digital
               marketing efforts, instead of handling in-house.
             </p>
-            <Link href="/">Contact Us</Link>
+            <Link href={routes.contact}>Contact Us</Link>
           </div>
 
           <div className="flex-1">

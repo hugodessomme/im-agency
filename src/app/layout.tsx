@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang={site.lang} className="scroll-smooth">
       <body
         className={cn(
           fontSans.variable,

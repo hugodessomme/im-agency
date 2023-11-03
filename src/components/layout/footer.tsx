@@ -1,5 +1,6 @@
 import Link from "next/link"
 
+import { routes } from "@/config/routes"
 import { site } from "@/config/site"
 import { Separator } from "@/components/ui/separator"
 import IconBadge from "@/components/icon-badge"
@@ -30,7 +31,7 @@ export function Footer() {
 
               return (
                 <li key={item.label}>
-                  <Link href="/">
+                  <Link href={item.url}>
                     <IconBadge className="h-12 w-12">
                       <Icon className="h-6 w-6" />
                     </IconBadge>
@@ -49,10 +50,10 @@ export function Footer() {
 
           <ul className="flex w-full justify-center gap-x-16 xl:w-auto">
             <li>
-              <Link href="/">Terms of Use</Link>
+              <Link href={routes.termsOfUse}>Terms of Use</Link>
             </li>
             <li>
-              <Link href="/">Privacy Policy</Link>
+              <Link href={routes.privacyPolicy}>Privacy Policy</Link>
             </li>
           </ul>
         </div>

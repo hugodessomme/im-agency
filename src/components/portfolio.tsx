@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
+import { routes } from "@/config/routes"
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 import { buttonVariants } from "@/components/ui/button"
@@ -26,7 +27,7 @@ export function Portfolio() {
 
         <ul className="mb-16 flex flex-wrap justify-center gap-x-14 gap-y-4">
           <li>
-            <Link href="/" className="text-white/[.64]">
+            <Link href={routes.portfolio} className="text-white/[.64]">
               <span className={pathname === "/" ? "text-white" : ""}>
                 Show All
               </span>
@@ -35,7 +36,7 @@ export function Portfolio() {
           </li>
 
           <li>
-            <Link href="/" className="text-white/[.64]">
+            <Link href={routes.portfolio} className="text-white/[.64]">
               <span className={pathname === "/design" ? "text-white" : ""}>
                 Design
               </span>
@@ -44,7 +45,7 @@ export function Portfolio() {
           </li>
 
           <li>
-            <Link href="/" className="text-white/[.64]">
+            <Link href={routes.portfolio} className="text-white/[.64]">
               <span className={pathname === "/branding" ? "text-white" : ""}>
                 Branding
               </span>
@@ -53,7 +54,7 @@ export function Portfolio() {
           </li>
 
           <li>
-            <Link href="/" className="text-white/[.64]">
+            <Link href={routes.portfolio} className="text-white/[.64]">
               <span
                 className={pathname === "/illustration" ? "text-white" : ""}
               >
@@ -64,7 +65,7 @@ export function Portfolio() {
           </li>
 
           <li>
-            <Link href="/" className="text-white/[.64]">
+            <Link href={routes.portfolio} className="text-white/[.64]">
               <span className={pathname === "/motion" ? "text-white" : ""}>
                 Motion
               </span>

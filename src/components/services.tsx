@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { BriefcaseIcon, PresentationIcon } from "lucide-react"
 
+import { routes } from "@/config/routes"
 import { Button } from "@/components/ui/button"
 import { Heading } from "@/components/ui/heading"
 import IconBadge from "@/components/icon-badge"
@@ -29,7 +30,7 @@ export function Services() {
               design, business.
             </p>
             <Button asChild variant="light">
-              <Link href="/about">Explore</Link>
+              <Link href={routes.about}>Explore</Link>
             </Button>
           </div>
         </div>
@@ -50,7 +51,7 @@ export function Services() {
                 design.
               </p>
               <p>
-                <Link href="/services">Discover More</Link>
+                <Link href={routes.services}>Discover More</Link>
               </p>
             </li>
             <li className="flex-1 px-7 py-12">
@@ -62,7 +63,7 @@ export function Services() {
                 Full service range including technical skills, design, business.
               </p>
               <p>
-                <Link href="/services">Discover More</Link>
+                <Link href={routes.services}>Discover More</Link>
               </p>
             </li>
             <li className="flex-1 px-7 py-12">
@@ -74,7 +75,7 @@ export function Services() {
                 Technical skills, design, business understanding, ability.
               </p>
               <p>
-                <Link href="/services">Explore Now</Link>
+                <Link href={routes.services}>Explore Now</Link>
               </p>
             </li>
           </ul>

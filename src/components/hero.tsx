@@ -1,5 +1,7 @@
 import Image from "next/image"
+import Link from "next/link"
 
+import { routes } from "@/config/routes"
 import { Button } from "@/components/ui/button"
 import { Heading } from "@/components/ui/heading"
 
@@ -18,9 +20,11 @@ export function Hero() {
               design, business understanding.
             </p>
             <div className="mb-11 flex gap-x-2 xl:mb-[6.75rem]">
-              <Button className="sm:flex-initial flex-1">How We Work</Button>
-              <Button variant="link" className="sm:flex-initial flex-1">
-                Contact Us
+              <Button className="sm:flex-initial flex-1" asChild>
+                <Link href="#how-we-work">How We Work</Link>
+              </Button>
+              <Button variant="link" className="sm:flex-initial flex-1" asChild>
+                <Link href={routes.contact}>Contact Us</Link>
               </Button>
             </div>
             <div className="flex items-start gap-x-4">

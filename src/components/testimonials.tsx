@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { StarIcon } from "lucide-react"
 
+import { routes } from "@/config/routes"
 import { testimonials } from "@/config/testimonials"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -71,7 +72,7 @@ export function Testimonials() {
 
         <div className="text-center">
           <Button asChild variant="light">
-            <Link href="/">See All</Link>
+            <Link href={routes.testimonials}>See All</Link>
           </Button>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
+import { routes } from "@/config/routes"
 import { Button } from "@/components/ui/button"
 import { Heading } from "@/components/ui/heading"
 
@@ -29,7 +30,7 @@ export function About() {
               merchant&apos;s team.
             </p>
             <Button asChild variant="light">
-              <Link href="/about">About Us</Link>
+              <Link href={routes.about}>About Us</Link>
             </Button>
           </div>
         </div>

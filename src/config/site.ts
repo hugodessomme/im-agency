@@ -1,38 +1,41 @@
 import { FacebookIcon, InstagramIcon, TwitterIcon } from "lucide-react"
 
+import { routes } from "@/config/routes"
+
 export const site = {
+  lang: "en",
   name: "IM Agency",
   description: "An open-source agency website built with Next.js 13.",
   url: "https://im-agency.vercel.app",
   headerNav: [
-    { label: "About", url: "/" },
-    { label: "Services", url: "/" },
-    { label: "Pricing", url: "/" },
-    { label: "Blog", url: "/" },
+    { label: "About", url: routes.about },
+    { label: "Services", url: routes.services },
+    { label: "Pricing", url: routes.pricing },
+    { label: "Blog", url: routes.blog },
   ],
   footerNav: [
     {
       title: "Menu",
       items: [
-        { label: "About", url: "/" },
-        { label: "Services", url: "/" },
-        { label: "Blog", url: "/" },
-        { label: "Contact", url: "/" },
+        { label: "About", url: routes.about },
+        { label: "Services", url: routes.services },
+        { label: "Blog", url: routes.blog },
+        { label: "Contact", url: routes.contact },
       ],
     },
     {
       title: "Services",
       items: [
-        { label: "Design", url: "/" },
-        { label: "Development", url: "/" },
-        { label: "Marketing", url: "/" },
-        { label: "See More", url: "/" },
+        { label: "Design", url: routes.services },
+        { label: "Development", url: routes.services },
+        { label: "Marketing", url: routes.services },
+        { label: "See More", url: routes.services },
       ],
     },
   ],
   socials: [
-    { label: "Facebook", url: "/", icon: FacebookIcon },
-    { label: "Twitter", url: "/", icon: TwitterIcon },
-    { label: "Instagram", url: "/", icon: InstagramIcon },
+    { label: "Facebook", url: "https://www.facebook.com/", icon: FacebookIcon },
+    { label: "Twitter", url: "https://x.com/", icon: TwitterIcon },
+    { label: "Instagram", url: "https://instagram.com/", icon: InstagramIcon },
   ],
 }

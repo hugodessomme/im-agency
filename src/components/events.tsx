@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { ClockIcon } from "lucide-react"
 
+import { routes } from "@/config/routes"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { Heading } from "@/components/ui/heading"
@@ -42,7 +43,7 @@ export function Events() {
               <p className="mb-7 leading-8 text-white/[.64]">
                 Digital agency is a business you hire to outsource your digital.
               </p>
-              <Link href="/">
+              <Link href={routes.events}>
                 <span className="absolute inset-0"></span>Explore Now
               </Link>
             </li>
@@ -51,7 +52,7 @@ export function Events() {
 
         <div className="text-center">
           <Link
-            href="/portfolio"
+            href={routes.portfolio}
             className={cn(buttonVariants({ variant: "outline" }), "text-white")}
           >
             Explore more

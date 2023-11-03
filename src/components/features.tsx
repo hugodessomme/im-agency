@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { CheckIcon, ShapesIcon } from "lucide-react"
 
+import { routes } from "@/config/routes"
 import { Heading } from "@/components/ui/heading"
 import IconBadge from "@/components/icon-badge"
 
@@ -57,7 +58,7 @@ export function Features() {
               Long run, and work as an extension of the merchant&apos;s team.
             </p>
             <p>
-              <Link href="/services">Read More</Link>
+              <Link href={routes.services}>Read More</Link>
             </p>
           </div>
           <ul className="xl:flex xl:items-end">
