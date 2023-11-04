@@ -135,7 +135,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
             <ul className="grid grid-cols-1 gap-x-7 gap-y-14 xl:grid-cols-3">
               {relatedArticles.map((post) => (
-                <li>
+                <li key={post.slug}>
                   <BlogPost post={post} />
                 </li>
               ))}
