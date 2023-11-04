@@ -1,5 +1,7 @@
 import Image from "next/image"
+import Link from "next/link"
 
+import { routes } from "@/config/routes"
 import { Button } from "@/components/ui/button"
 import { Heading } from "@/components/ui/heading"
 
@@ -25,7 +27,10 @@ export function HelpBuildDreamProject() {
               A digital agency is a business you hire to outsource your digital
               marketing efforts, instead of handling in-house.
             </p>
-            <Button variant="light">Contact Us</Button>
+
+            <Button variant="light" asChild>
+              <Link href={routes.contact}>Contact Us</Link>
+            </Button>
           </div>
         </div>
       </div>
