@@ -1,3 +1,5 @@
+import { LucideIcon } from "lucide-react"
+
 export interface Team {
   fullname: string
   job: string
@@ -48,4 +50,9 @@ export interface Post {
   date: string
   slug: string
   featured?: boolean
+}
+
+export interface Service {
+  label: string
+  icon: LucideIcon
 }

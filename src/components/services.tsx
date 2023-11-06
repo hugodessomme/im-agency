@@ -5,7 +5,7 @@ import { BriefcaseIcon, PresentationIcon } from "lucide-react"
 import { routes } from "@/config/routes"
 import { Button } from "@/components/ui/button"
 import { Heading } from "@/components/ui/heading"
-import IconBadge from "@/components/icon-badge"
+import { IconBadge } from "@/components/icon-badge"
 
 export function Services() {
   return (
