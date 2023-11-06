@@ -82,9 +82,9 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               </p>
               <h2>Promote your product</h2>
               <p>
-                Ability to put themselves in the merchant's shoes. It is meant
-                to partner on the long run, and work as an extension of the
-                merchant's team.
+                Ability to put themselves in the merchant&apos;s shoes. It is
+                meant to partner on the long run, and work as an extension of
+                the merchant&apos;s team.
               </p>
               <ul>
                 <li>Digital marketing</li>
@@ -92,15 +92,15 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 <li>Handling in-house</li>
               </ul>
               <p>
-                Ability to put themselves in the merchant's shoes. It is meant
-                to partner on the long run, and work as an extension of the
-                merchant's team.
+                Ability to put themselves in the merchant&apos;s shoes. It is
+                meant to partner on the long run, and work as an extension of
+                the merchant&apos;s team.
               </p>
               <h2>Service online and help</h2>
               <p>
-                Put themselves in the merchant's shoes. It is meant to partner
-                on the long run, and work as an extension of the merchant's
-                team.
+                Put themselves in the merchant&apos;s shoes. It is meant to
+                partner on the long run, and work as an extension of the
+                merchant&apos;s team.
               </p>
               <ol>
                 <li>Marketing efforts</li>
