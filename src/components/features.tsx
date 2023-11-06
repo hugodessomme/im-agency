@@ -4,7 +4,7 @@ import { CheckIcon, ShapesIcon } from "lucide-react"
 
 import { routes } from "@/config/routes"
 import { Heading } from "@/components/ui/heading"
-import IconBadge from "@/components/icon-badge"
+import { IconBadge } from "@/components/icon-badge"
 
 export function Features() {
   return (

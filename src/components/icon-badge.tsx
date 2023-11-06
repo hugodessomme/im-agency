@@ -26,7 +26,7 @@ interface IconBadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof iconBadgeVariants> {}
 
-export default function IconBadge({
+export function IconBadge({
   variant,
   size,
   className,

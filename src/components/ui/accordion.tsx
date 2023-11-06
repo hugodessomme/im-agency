@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
-import IconBadge from "../icon-badge"
+import { IconBadge } from "../icon-badge"
 
 const Accordion = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Root>,

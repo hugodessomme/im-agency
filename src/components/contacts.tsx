@@ -2,7 +2,7 @@ import Image from "next/image"
 import { CompassIcon, MailIcon, PhoneIcon } from "lucide-react"
 
 import { ContactForm } from "@/components/form/contact-form"
-import IconBadge from "@/components/icon-badge"
+import { IconBadge } from "@/components/icon-badge"
 
 export function Contacts() {
   return (

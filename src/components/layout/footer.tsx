@@ -3,7 +3,7 @@ import Link from "next/link"
 import { routes } from "@/config/routes"
 import { site } from "@/config/site"
 import { Separator } from "@/components/ui/separator"
-import IconBadge from "@/components/icon-badge"
+import { IconBadge } from "@/components/icon-badge"
 
 export function Footer() {
   return (
