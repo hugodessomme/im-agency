@@ -68,10 +68,62 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
         <div className="container mb-16 max-w-[39rem]">
           <div className="mb-16 xl:mb-14">
-            <p className="text-xl leading-8">
+            <p className="mb-8 text-xl leading-8">
               Agency provides a full service range including technical skills,
               design, business understanding.
             </p>
+
+            <div className="prose max-w-none">
+              <p>
+                Outsource your digital marketing efforts, instead of handling
+                in-house. They can provide your business with a variety of
+                digital solutions to promote your product or service online and
+                help you.
+              </p>
+              <h2>Promote your product</h2>
+              <p>
+                Ability to put themselves in the merchant's shoes. It is meant
+                to partner on the long run, and work as an extension of the
+                merchant's team.
+              </p>
+              <ul>
+                <li>Digital marketing</li>
+                <li>Efforts instead</li>
+                <li>Handling in-house</li>
+              </ul>
+              <p>
+                Ability to put themselves in the merchant's shoes. It is meant
+                to partner on the long run, and work as an extension of the
+                merchant's team.
+              </p>
+              <h2>Service online and help</h2>
+              <p>
+                Put themselves in the merchant's shoes. It is meant to partner
+                on the long run, and work as an extension of the merchant's
+                team.
+              </p>
+              <ol>
+                <li>Marketing efforts</li>
+                <li>Instead of handling</li>
+                <li>In-house</li>
+              </ol>
+              <p>
+                Agency is a business you hire to outsource your digital
+                marketing efforts, instead of handling in-house. They can
+                provide your business with a variety of digital solutions to
+                promote your product or service online and help you.
+              </p>
+              <blockquote>
+                Provide your business with a variety of digital solutions to
+                promote your product or service online and help you.
+              </blockquote>
+              <p>
+                Outsource your digital marketing efforts, instead of handling
+                in-house. They can provide your business with a variety of
+                digital solutions to promote your product or service online and
+                help you.
+              </p>
+            </div>
           </div>
 
           <Separator className="mb-16" />

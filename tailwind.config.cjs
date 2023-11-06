@@ -36,13 +36,13 @@ module.exports = {
     extend: {
       colors: {
         background: {
-          subtle: "#f3d1bf",
           DEFAULT: "#fdf0e9",
+          subtle: "#f3d1bf",
           emphasis: "#f9e5da",
         },
         foreground: {
-          subtle: "rgb(57 20 0 / 0.64)",
           DEFAULT: "#391400",
+          subtle: "rgb(57 20 0 / 0.64)",
         },
         primary: {
           DEFAULT: "#ef6d58",
@@ -53,8 +53,8 @@ module.exports = {
           foreground: colors.white,
         },
         tertiary: {
-          subtle: "rgb(58 60 86)",
           DEFAULT: "#28293e",
+          subtle: "rgb(58 60 86)",
         },
       },
       keyframes: {
@@ -71,7 +71,32 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            "--tw-prose-body": theme("colors.foreground.subtle"),
+            "--tw-prose-headings": theme("colors.foreground.DEFAULT"),
+            "--tw-prose-counters": theme("colors.foreground.DEFAULT"),
+            "--tw-prose-bullets": theme("colors.primary.DEFAULT"),
+            "--tw-prose-quotes": theme("colors.foreground.DEFAULT"),
+            blockquote: {
+              paddingTop: theme("padding[10]"),
+              paddingRight: theme("padding[8]"),
+              paddingBottom: theme("padding[10]"),
+              paddingLeft: theme("padding[8]"),
+              backgroundColor: theme("colors.background.emphasis"),
+              borderLeft: 0,
+              borderRadius: theme("borderRadius.md"),
+              fontSize: theme("fontSize[xl]"),
+              lineHeight: theme("lineHeight[8]"),
+            },
+            li: {
+              color: theme("colors.foreground.DEFAULT"),
+            },
+          },
+        },
+      }),
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 }
