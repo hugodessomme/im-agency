@@ -13,7 +13,7 @@ import { Heading } from "@/components/ui/heading"
 import { Separator } from "@/components/ui/separator"
 import { BlogPost } from "@/components/blog-post"
 import { HelpBuildDreamProject } from "@/components/help-build-dream-project"
-import IconBadge from "@/components/icon-badge"
+import { IconBadge } from "@/components/icon-badge"
 
 interface BlogPostPageProps {
   params: {
