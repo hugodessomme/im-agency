@@ -4,7 +4,7 @@ export const routes = {
   contact: "/contact",
   events: "/",
   home: "/",
-  portfolio: "/",
+  portfolio: "/portfolio",
   pricing: "/",
   privacyPolicy: "/",
   services: "/services",

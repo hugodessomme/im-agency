@@ -1,58 +1,65 @@
 import { LucideIcon } from "lucide-react"
 
-export interface Team {
-  fullname: string
-  job: string
-  image: {
-    url: string
-    width: number
-    height: number
-  }
-}
-
-export interface Testimonial {
-  content: string
-  name: string
-  company: string
+export interface Award {
+  competition: string
+  competitionImage: string
+  date: string
   image: string
-}
-
-export interface PlanOptions {
-  label: string
-  included: boolean
+  title: string
 }
 
 export interface Plan {
+  content: string
   offer: string
-  price: string
-  popular: boolean
-  content: string
   options: PlanOptions[]
+  popular: boolean
+  price: string
 }
 
-export interface Question {
+export interface PlanOptions {
+  included: boolean
   label: string
-  content: string
-}
-
-export interface Award {
-  image: string
-  title: string
-  date: string
-  competition: string
-  competitionImage: string
 }
 
 export interface Post {
-  image: string
   category: string
-  title: string
   date: string
-  slug: string
   featured?: boolean
+  image: string
+  slug: string
+  title: string
+}
+
+export interface Question {
+  content: string
+  label: string
 }
 
 export interface Service {
-  label: string
   icon: LucideIcon
+  label: string
+}
+
+export interface Team {
+  fullname: string
+  image: {
+    height: number
+    url: string
+    width: number
+  }
+  job: string
+}
+
+export interface Testimonial {
+  company: string
+  content: string
+  image: string
+  name: string
+}
+
+export interface Reference {
+  badge: string
+  image: string
+  label: string
+  url: string
 }

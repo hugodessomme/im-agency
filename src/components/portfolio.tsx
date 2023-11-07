@@ -3,11 +3,12 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
+import { references } from "@/config/references"
 import { routes } from "@/config/routes"
 import { cn } from "@/lib/utils"
-import { Badge } from "@/components/ui/badge"
 import { buttonVariants } from "@/components/ui/button"
 import { Heading } from "@/components/ui/heading"
+import { PortfolioItem } from "@/components/portfolio-item"
 
 export function Portfolio() {
   const pathname = usePathname()
@@ -74,36 +75,21 @@ export function Portfolio() {
           </li>
         </ul>
 
-        <div className="mb-16 grid grid-cols-1 gap-7 xl:grid-cols-12">
-          <div className="flex h-[26rem] flex-col items-start justify-end overflow-hidden rounded-md bg-neutral-400 px-7 py-12 xl:col-span-4 xl:px-12">
-            <Badge className="mb-6">Illustration</Badge>
-            <p className="text-[2.5rem] font-extrabold leading-[3rem] text-white">
-              Work Media
-            </p>
-          </div>
-          <div className="flex h-[26rem] flex-col items-start justify-end overflow-hidden rounded-md bg-neutral-400 px-7 py-12 xl:col-span-8 xl:px-12">
-            <Badge className="mb-6">Illustration</Badge>
-            <p className="text-[2.5rem] font-extrabold leading-[3rem] text-white">
-              Work Media
-            </p>
-          </div>
-          <div className="flex h-[26rem] flex-col items-start justify-end overflow-hidden rounded-md bg-neutral-400 px-7 py-12 xl:col-span-8 xl:px-12">
-            <Badge className="mb-6">Illustration</Badge>
-            <p className="text-[2.5rem] font-extrabold leading-[3rem] text-white">
-              Work Media
-            </p>
-          </div>
-          <div className="flex h-[26rem] flex-col items-start justify-end overflow-hidden rounded-md bg-neutral-400 px-7 py-12 xl:col-span-4 xl:px-12">
-            <Badge className="mb-6">Illustration</Badge>
-            <p className="text-[2.5rem] font-extrabold leading-[3rem] text-white">
-              Work Media
-            </p>
-          </div>
+        <div className="mb-16 grid grid-cols-1 gap-7 xl:grid-cols-3">
+          {references.map((reference) => (
+            <PortfolioItem
+              key={reference.url}
+              reference={reference}
+              className={cn(
+                "xl:[&:nth-child(4n+2)]:col-span-2 xl:[&:nth-child(4n+3)]:col-span-2"
+              )}
+            />
+          ))}
         </div>
 
         <div className="text-center">
           <Link
-            href="/portfolio"
+            href={routes.portfolio}
             className={cn(buttonVariants({ variant: "outline" }), "text-white")}
           >
             Explore more
