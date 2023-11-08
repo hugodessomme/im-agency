@@ -4,9 +4,9 @@ import { posts } from "@/config/posts"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Banner } from "@/components/banner"
+import { HelpBuildDreamProject } from "@/components/block/help-build-dream-project"
+import { Newsletter } from "@/components/block/newsletter"
 import { BlogPost } from "@/components/blog-post"
-import { HelpBuildDreamProject } from "@/components/help-build-dream-project"
-import { Newsletter } from "@/components/newsletter"
 
 export default function Blog() {
   const featuredPosts = posts.filter((post) => post.featured)

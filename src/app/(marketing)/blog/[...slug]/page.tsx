@@ -11,8 +11,8 @@ import { posts } from "@/config/posts"
 import { routes } from "@/config/routes"
 import { Heading } from "@/components/ui/heading"
 import { Separator } from "@/components/ui/separator"
+import { HelpBuildDreamProject } from "@/components/block/help-build-dream-project"
 import { BlogPost } from "@/components/blog-post"
-import { HelpBuildDreamProject } from "@/components/help-build-dream-project"
 import { IconBadge } from "@/components/icon-badge"
 
 interface BlogPostPageProps {

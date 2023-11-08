@@ -1,7 +1,7 @@
 import { Separator } from "@/components/ui/separator"
 import { Banner } from "@/components/banner"
-import { Contacts } from "@/components/contacts"
-import { Faq } from "@/components/faq"
+import { Contacts } from "@/components/block/contacts"
+import { Faq } from "@/components/block/faq"
 
 export default function ContactPage() {
   return (

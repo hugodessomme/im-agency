@@ -9,8 +9,8 @@ import {
 } from "@/components/ui/accordion"
 import { Heading } from "@/components/ui/heading"
 import { Banner } from "@/components/banner"
-import { HelpBuildDreamProject } from "@/components/help-build-dream-project"
-import { HowWeWork } from "@/components/how-we-work"
+import { HelpBuildDreamProject } from "@/components/block/help-build-dream-project"
+import { HowWeWork } from "@/components/block/how-we-work"
 import { IconBadge } from "@/components/icon-badge"
 
 export default function ServicesPage() {

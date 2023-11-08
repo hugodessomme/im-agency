@@ -3,8 +3,8 @@ import Link from "next/link"
 
 import { routes } from "@/config/routes"
 import { site } from "@/config/site"
-import { MainNav } from "@/components/main-nav"
-import { MobileNav } from "@/components/mobile-nav"
+import { MainNav } from "@/components/layout/main-nav"
+import { MobileNav } from "@/components/layout/mobile-nav"
 
 export function Header() {
   return (

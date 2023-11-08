@@ -1,6 +1,6 @@
 import { team } from "@/config/team"
 
-import { TeamCarousel } from "./team-carousel"
+import { TeamCarousel } from "../team-carousel"
 
 export function Team() {
   return (
