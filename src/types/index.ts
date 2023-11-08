@@ -58,7 +58,7 @@ export interface Testimonial {
 }
 
 export interface Reference {
-  badge: string
+  category: string
   image: string
   label: string
   url: string

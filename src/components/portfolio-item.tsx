@@ -24,7 +24,7 @@ export function PortfolioItem({ reference, className }: PortfolioItemProps) {
         quality={100}
         className="-z-10 object-cover transition-transform group-hover:scale-105"
       />
-      <Badge className="mb-6">{reference.badge}</Badge>
+      <Badge className="mb-6">{reference.category}</Badge>
       <p className="text-[2.5rem] font-extrabold leading-[3rem] text-white">
         <Link href={reference.url}>
           <span className="absolute inset-0"></span>

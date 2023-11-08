@@ -4,13 +4,13 @@ import { routes } from "@/config/routes"
 
 export const site = {
   lang: "en",
-  name: "IM Agency",
+  name: "im agency",
   description: "An open-source agency website built with Next.js 13.",
   url: "https://im-agency.vercel.app",
   headerNav: [
     { label: "About", url: routes.about },
     { label: "Services", url: routes.services },
-    { label: "Pricing", url: routes.pricing },
+    { label: "Portfolio", url: routes.portfolio },
     { label: "Blog", url: routes.blog },
   ],
   footerNav: [
@@ -19,7 +19,7 @@ export const site = {
       items: [
         { label: "About", url: routes.about },
         { label: "Services", url: routes.services },
-        { label: "Blog", url: routes.blog },
+        { label: "Portfolio", url: routes.portfolio },
         { label: "Contact", url: routes.contact },
       ],
     },

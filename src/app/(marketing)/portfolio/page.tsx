@@ -1,9 +1,18 @@
-import { references } from "@/config/references"
+import { getReferencesTotalPages } from "@/lib/data"
 import { Banner } from "@/components/banner"
-import { HelpBuildDreamProject } from "@/components/help-build-dream-project"
-import { PortfolioItem } from "@/components/portfolio-item"
+import { HelpBuildDreamProject } from "@/components/block/help-build-dream-project"
+import { Pagination } from "@/components/pagination"
+import { PortfolioGrid } from "@/components/portfolio-grid"
 
-export default function PortfolioPage() {
+export default async function PortfolioPage({
+  searchParams,
+}: {
+  searchParams?: { query?: string; page?: string }
+}) {
+  const query = searchParams?.query || ""
+  const currentPage = Number(searchParams?.page) || 1
+  const totalPages = await getReferencesTotalPages(query)
+
   return (
     <>
       <Banner
@@ -14,13 +23,9 @@ export default function PortfolioPage() {
 
       <main className="mb-28">
         <div className="container">
-          <ul className="grid grid-cols-1 gap-7 xl:grid-cols-3">
-            {references.map((reference) => (
-              <li key={reference.url} className="first:col-span-3">
-                <PortfolioItem reference={reference} />
-              </li>
-            ))}
-          </ul>
+          <PortfolioGrid query={query} currentPage={currentPage} />
+
+          <Pagination totalPages={totalPages} />
         </div>
       </main>
 
