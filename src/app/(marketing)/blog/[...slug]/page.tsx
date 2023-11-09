@@ -11,6 +11,7 @@ import { posts } from "@/config/posts"
 import { routes } from "@/config/routes"
 import { Heading } from "@/components/ui/heading"
 import { Separator } from "@/components/ui/separator"
+import { BackLink } from "@/components/back-link"
 import { HelpBuildDreamProject } from "@/components/block/help-build-dream-project"
 import { BlogPost } from "@/components/blog-post"
 import { IconBadge } from "@/components/icon-badge"
@@ -26,17 +27,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <>
-      <div className="container my-12 max-w-[39rem]">
-        <p>
-          <Link
-            href={routes.blog}
-            className="inline-flex items-center text-xs font-bold uppercase hover:underline"
-          >
-            <ArrowLeftIcon className="mr-3 h-4 w-4" />
-            Back to Blog
-          </Link>
-        </p>
-      </div>
+      <BackLink href={routes.blog} label="Back to Blog" />
 
       <main className="mb-16 xl:mb-20">
         <div className="container mb-16 max-w-[39rem]">
