@@ -80,9 +80,9 @@ export default function PortfolioDetail({ params }: PortfolioDetailPageProps) {
             Problem
           </Heading>
           <p className="mb-2">
-            Ability to put themselves in the merchant's shoes. It is meant to
-            partner on the long run, and work as an extension of the merchant's
-            team.
+            Ability to put themselves in the merchant&apos;s shoes. It is meant
+            to partner on the long run, and work as an extension of the
+            merchant&apos;s team.
           </p>
           <p>
             A digital agency is a business you hire to outsource your digital
@@ -147,8 +147,9 @@ export default function PortfolioDetail({ params }: PortfolioDetailPageProps) {
             Solution
           </Heading>
           <p className="mb-2">
-            Put themselves in the merchant's shoes. It is meant to partner on
-            the long run, and work as an extension of the merchant's team.
+            Put themselves in the merchant&apos;s shoes. It is meant to partner
+            on the long run, and work as an extension of the merchant&apos;s
+            team.
           </p>
           <p>
             Agency is a business you hire to outsource your digital marketing
