@@ -48,22 +48,25 @@ export async function getFilteredReferences(
 export async function getReferencesCountByCategory() {
   try {
     const totalByCategory = references.reduce<{
-      [key: string]: { label: string; count: number }
+      categoriesTotal: {[key: string]: { label: string; count: number }},
+      total: number
     }>((acc, reference) => {
       const category = reference.category
       const formattedCategory = category.toLowerCase()
 
-      if (acc[formattedCategory]) {
-        acc[formattedCategory].count++
+      if (acc.categoriesTotal[formattedCategory]) {
+        acc.categoriesTotal[formattedCategory].count++
       } else {
-        acc[formattedCategory] = {
+        acc.categoriesTotal[formattedCategory] = {
           label: category,
           count: 1,
         }
       }
 
+      acc.total++
+
       return acc
-    }, {})
+    }, { categoriesTotal: {}, total: 0})
 
     const totalAllCategories = Object.values(totalByCategory).reduce(
       (acc, current) => acc + current.count,
