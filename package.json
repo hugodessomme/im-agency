@@ -20,8 +20,8 @@
     "@radix-ui/react-toast": "^1.1.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
-    "embla-carousel-react": "^8.0.0-rc18",
-    "lucide-react": "^0.304.0",
+    "embla-carousel-react": "^8.0.0-rc19",
+    "lucide-react": "^0.307.0",
     "next": "^14.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -44,7 +44,7 @@
     "eslint-config-next": "^14.0.4",
     "postcss": "^8",
     "prettier": "^3.1.1",
-    "prettier-plugin-tailwindcss": "^0.5.10",
+    "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwindcss": "^3",
     "typescript": "^5"
   }
